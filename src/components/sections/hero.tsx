@@ -11,7 +11,7 @@ const Hero = ({ isHeaderVisible }: HeroProps) => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-orange-900 z-0"></div>
       <div className="absolute inset-0 bg-black/50 z-10"></div>
       
-      <div className={`container mx-auto px-4 z-20 transition-all duration-700 ease-in-out ${isHeaderVisible ? 'pt-0' : 'pt-20'} w-[90%]`}>
+      <div className={`container mx-auto px-4 z-20 transition-all duration-700 ease-in-out ${isHeaderVisible ? 'pt-0' : 'pt-0'} w-[90%]`}>
         <div className={`flex flex-col lg:flex-row items-center transition-all duration-700 ease-in-out ${isHeaderVisible ? 'justify-center' : 'justify-between'}`}>
           <div className={`transition-all duration-700 ease-in-out ${isHeaderVisible ? 'w-0 opacity-0 -translate-x-full' : 'w-full lg:w-1/3 opacity-100 translate-x-0'}`}>
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left mb-8 lg:mb-0">
@@ -24,7 +24,6 @@ const Hero = ({ isHeaderVisible }: HeroProps) => {
                     data-ai-hint="event logo modern"
                     className="filter drop-shadow-2xl"
                 />
-                <p className="font-headline mt-2 text-lg">by Thanima VITC</p>
             </div>
           </div>
           <div className={`flex-grow transition-all duration-700 ease-in-out ${isHeaderVisible ? 'w-full' : 'w-full lg:w-2/3'}`}>
