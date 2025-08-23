@@ -55,41 +55,30 @@ const CountdownTimer = () => {
     { label: 'Seconds', value: timeLeft.seconds },
   ];
 
-  if (!isMounted) {
-    return (
-        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-6 md:gap-x-8 text-center text-primary-foreground max-w-sm mx-auto md:max-w-none">
-        {timerComponents.map((component, index) => (
-          <div key={component.label} className="flex items-center">
-            <div className="flex flex-col items-center">
-              <span className="font-display text-5xl md:text-7xl lg:text-8xl tracking-wider">
-                00
-              </span>
-              <span className="text-sm md:text-base font-headline uppercase tracking-widest">{component.label}</span>
-            </div>
-            {index < timerComponents.length - 1 && (
-              <span className={`font-display text-5xl md:text-7xl lg:text-8xl ml-4 md:ml-8 ${index === 1 ? 'hidden md:inline' : ''}`}>:</span>
-            )}
-          </div>
-        ))}
+  const renderTimerComponent = (component: {label: string, value: number}, index: number) => (
+    <div key={component.label} className="flex items-center">
+      <div className="flex flex-col items-center">
+        <span className="font-display text-5xl md:text-7xl lg:text-8xl tracking-wider">
+          {isMounted ? String(component.value).padStart(2, '0') : '00'}
+        </span>
+        <span className="text-sm md:text-base font-headline uppercase tracking-widest">{component.label}</span>
       </div>
-    );
-  }
+      {index % 2 === 0 && (
+        <span className="font-display text-5xl md:text-7xl lg:text-8xl ml-4 md:ml-8">:</span>
+      )}
+    </div>
+  );
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-6 md:gap-x-8 text-center text-primary-foreground max-w-sm mx-auto md:max-w-none">
-      {timerComponents.map((component, index) => (
-        <div key={component.label} className="flex items-center">
-          <div className="flex flex-col items-center">
-            <span className="font-display text-5xl md:text-7xl lg:text-8xl tracking-wider">
-              {String(component.value).padStart(2, '0')}
-            </span>
-            <span className="text-sm md:text-base font-headline uppercase tracking-widest">{component.label}</span>
-          </div>
-          {index < timerComponents.length - 1 && (
-             <span className={`font-display text-5xl md:text-7xl lg:text-8xl ml-4 md:ml-8 ${index === 1 ? 'hidden md:inline' : ''}`}>:</span>
-          )}
-        </div>
-      ))}
+    <div className="flex flex-col md:flex-row items-center justify-center gap-y-6 md:gap-x-8 text-center text-primary-foreground max-w-md mx-auto md:max-w-none">
+      <div className="flex justify-center items-center gap-x-4 md:gap-x-8">
+        {renderTimerComponent(timerComponents[0], 0)}
+        {renderTimerComponent(timerComponents[1], 1)}
+      </div>
+      <div className="flex justify-center items-center gap-x-4 md:gap-x-8">
+        {renderTimerComponent(timerComponents[2], 2)}
+        {renderTimerComponent(timerComponents[3], 3)}
+      </div>
     </div>
   );
 };
