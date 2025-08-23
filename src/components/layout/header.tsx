@@ -14,10 +14,10 @@ const Header = ({ isVisible }: HeaderProps) => {
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Image
-            src="https://placehold.co/120x60.png"
+            src="/sargam_logo.png"
             alt="Sargam Logo"
-            width={120}
-            height={60}
+            width={50}
+            height={25}
             data-ai-hint="event logo"
             className="object-contain"
           />
