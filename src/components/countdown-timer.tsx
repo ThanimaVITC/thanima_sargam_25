@@ -45,7 +45,7 @@ const CountdownTimer = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center space-x-4 md:space-x-8 text-center text-primary-foreground">
+    <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-6 md:gap-x-8 text-center text-primary-foreground">
       {timerComponents.map((component, index) => (
         <div key={component.label} className="flex items-center">
           <div className="flex flex-col items-center">
@@ -55,7 +55,7 @@ const CountdownTimer = () => {
             <span className="text-sm md:text-base font-headline uppercase tracking-widest">{component.label}</span>
           </div>
           {index < timerComponents.length - 1 && (
-            <span className="font-display text-5xl md:text-7xl lg:text-8xl ml-4 md:ml-8">:</span>
+             <span className={`font-display text-5xl md:text-7xl lg:text-8xl ml-4 md:ml-8 ${index === 1 ? 'hidden md:inline' : ''}`}>:</span>
           )}
         </div>
       ))}
