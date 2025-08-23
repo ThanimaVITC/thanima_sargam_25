@@ -1,4 +1,5 @@
-import { MapPin, Calendar, Clock } from 'lucide-react';
+import { MapPin, Calendar, Clock, SeparatorVertical } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 const SargamInfo = () => {
   return (
@@ -11,24 +12,32 @@ const SargamInfo = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-card p-8 rounded-2xl shadow-lg">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center space-y-3">
-              <MapPin className="h-10 w-10 text-primary" />
-              <h3 className="text-2xl font-headline font-semibold text-foreground">Venue</h3>
-              <p className="text-muted-foreground text-lg">MG Auditorium</p>
+        <div className="max-w-5xl mx-auto border border-border/50 rounded-2xl p-6">
+            <div className="flex flex-col md:flex-row items-center justify-around gap-6 text-center">
+                <div className="flex items-center space-x-3">
+                    <MapPin className="h-8 w-8 text-primary" />
+                    <div className='text-left'>
+                        <h3 className="text-xl font-headline font-semibold text-foreground">Venue</h3>
+                        <p className="text-muted-foreground text-md">MG Auditorium</p>
+                    </div>
+                </div>
+                <Separator orientation='vertical' className="h-12 bg-border/50 hidden md:block" />
+                <div className="flex items-center space-x-3">
+                    <Calendar className="h-8 w-8 text-primary" />
+                     <div className='text-left'>
+                        <h3 className="text-xl font-headline font-semibold text-foreground">Date</h3>
+                        <p className="text-muted-foreground text-md">August 30th</p>
+                    </div>
+                </div>
+                 <Separator orientation='vertical' className="h-12 bg-border/50 hidden md:block" />
+                <div className="flex items-center space-x-3">
+                    <Clock className="h-8 w-8 text-primary" />
+                    <div className='text-left'>
+                        <h3 className="text-xl font-headline font-semibold text-foreground">Time</h3>
+                        <p className="text-muted-foreground text-md">9:00 AM Onwards</p>
+                    </div>
+                </div>
             </div>
-            <div className="flex flex-col items-center space-y-3">
-              <Calendar className="h-10 w-10 text-primary" />
-              <h3 className="text-2xl font-headline font-semibold text-foreground">Date</h3>
-              <p className="text-muted-foreground text-lg">August 30th</p>
-            </div>
-            <div className="flex flex-col items-center space-y-3">
-              <Clock className="h-10 w-10 text-primary" />
-              <h3 className="text-2xl font-headline font-semibold text-foreground">Time</h3>
-              <p className="text-muted-foreground text-lg">9:00 AM Onwards</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
