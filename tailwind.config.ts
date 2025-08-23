@@ -11,8 +11,8 @@ export default {
     extend: {
       fontFamily: {
         body: ['"PT Sans"', 'sans-serif'],
-        headline: ['"TAN-Kindred"', 'sans-serif'],
-        display: ['"TAN-Kindred"', 'sans-serif'],
+        headline: ['"Gambarino"', 'serif'],
+        display: ['"Melodrama"', 'serif'],
         code: ['monospace'],
       },
       colors: {

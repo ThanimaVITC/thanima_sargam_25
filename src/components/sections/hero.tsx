@@ -24,6 +24,7 @@ const Hero = ({ isHeaderVisible }: HeroProps) => {
                     data-ai-hint="event logo modern"
                     className="filter drop-shadow-2xl"
                 />
+                <h2 className="text-4xl md:text-5xl font-display text-primary-foreground mt-4">സംഗമം</h2>
             </div>
           </div>
           <div className={`flex-grow transition-all duration-700 ease-in-out ${isHeaderVisible ? 'w-full' : 'w-full lg:w-2/3'}`}>

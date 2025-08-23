@@ -13,7 +13,7 @@ const SargamInfo = () => {
         </div>
 
         <div className="max-w-5xl mx-auto border border-border/50 rounded-2xl p-6">
-            <div className="flex flex-col md:flex-row items-center justify-around gap-6 text-center">
+            <div className="flex flex-wrap items-center justify-center gap-6 text-center md:justify-around">
                 <div className="flex items-center space-x-3">
                     <MapPin className="h-8 w-8 text-primary" />
                     <div className='text-left'>
@@ -21,7 +21,7 @@ const SargamInfo = () => {
                         <p className="text-muted-foreground text-md">MG Auditorium</p>
                     </div>
                 </div>
-                <Separator orientation='vertical' className="h-12 bg-border/50 hidden md:block" />
+                <Separator orientation='vertical' className="h-12 bg-border/50 hidden sm:block" />
                 <div className="flex items-center space-x-3">
                     <Calendar className="h-8 w-8 text-primary" />
                      <div className='text-left'>
@@ -29,7 +29,7 @@ const SargamInfo = () => {
                         <p className="text-muted-foreground text-md">August 30th</p>
                     </div>
                 </div>
-                 <Separator orientation='vertical' className="h-12 bg-border/50 hidden md:block" />
+                 <Separator orientation='vertical' className="h-12 bg-border/50 hidden sm:block" />
                 <div className="flex items-center space-x-3">
                     <Clock className="h-8 w-8 text-primary" />
                     <div className='text-left'>
