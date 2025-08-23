@@ -45,7 +45,7 @@ const CountdownTimer = () => {
   ];
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-6 md:gap-x-8 text-center text-primary-foreground">
+    <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-6 md:gap-x-8 text-center text-primary-foreground max-w-sm mx-auto md:max-w-none">
       {timerComponents.map((component, index) => (
         <div key={component.label} className="flex items-center">
           <div className="flex flex-col items-center">
