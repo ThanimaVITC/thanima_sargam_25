@@ -24,6 +24,7 @@ const Header = ({ isVisible }: HeaderProps) => {
           <h1 className="text-2xl font-headline font-bold text-primary">Sargam</h1>
         </div>
         <nav className="hidden md:flex space-x-6 items-center">
+            <a href="#sargam-info" className="font-headline text-foreground hover:text-primary transition-colors">Sargam</a>
             <a href="#about" className="font-headline text-foreground hover:text-primary transition-colors">About</a>
             <a href="#video" className="font-headline text-foreground hover:text-primary transition-colors">Video</a>
             <a href="#gallery" className="font-headline text-foreground hover:text-primary transition-colors">Gallery</a>
