@@ -43,7 +43,7 @@ const CountdownTimer = () => {
   }, []);
   
   const TimeValue = ({value, isSeconds}: {value: number, isSeconds?: boolean}) => (
-      <span key={isSeconds ? value: undefined} className={`font-display text-5xl md:text-7xl lg:text-8xl tracking-wider ${isSeconds ? 'animate-in fade-in-0 slide-in-from-top-4 duration-500' : ''}`}>
+      <span key={isSeconds ? value: undefined} className={`font-tankindred text-5xl md:text-7xl lg:text-8xl tracking-wider ${isSeconds ? 'animate-in fade-in-0 slide-in-from-top-4 duration-500' : ''}`}>
           {String(value).padStart(2, "0")}
       </span>
   );
@@ -55,7 +55,7 @@ const CountdownTimer = () => {
     </div>
   );
 
-  const Colon = () => <span className="font-display text-5xl md:text-7xl lg:text-8xl hidden md:inline">:</span>;
+  const Colon = () => <span className="font-tankindred text-5xl md:text-7xl lg:text-8xl hidden md:inline">:</span>;
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-y-6 md:gap-x-4 lg:gap-x-8 text-center text-primary-foreground max-w-md mx-auto md:max-w-none">

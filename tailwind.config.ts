@@ -13,6 +13,7 @@ export default {
         body: ['"PT Sans"', 'sans-serif'],
         headline: ['"Gambarino"', 'serif'],
         display: ['"Melodrama"', 'serif'],
+        tankindred: ['"Tankindred Display"', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
