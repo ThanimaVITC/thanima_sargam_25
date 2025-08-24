@@ -38,7 +38,7 @@ const Gallery = () => {
     <section id="gallery" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 w-[90%]">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary">Moments from Sargam</h2>
+          <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary">Moments from Sargam 24</h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
             A glimpse into the magic of our past events.
           </p>

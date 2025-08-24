@@ -8,7 +8,7 @@ const Registration = () => {
                 size="lg"
                 className="rounded-full shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out bg-primary/20 backdrop-blur-lg border border-primary/30 hover:bg-primary/30 text-primary-foreground text-lg font-bold px-8 py-6"
             >
-                <a href="#">Register Now</a>
+                <a href="https://eventhubcc.vit.ac.in/EventHub" target="_blank" rel="noopener noreferrer">Register Now</a>
             </Button>
         </div>
     );
