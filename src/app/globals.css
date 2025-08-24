@@ -8,7 +8,7 @@ body {
 
 @layer base {
   :root {
-    --background: 20 14.3% 4.1%;
+    --background: 20 14.3% 2.5%;
     --foreground: 0 0% 95%;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
@@ -20,7 +20,7 @@ body {
     --secondary-foreground: 0 0% 98%;
     --muted: 12 6.5% 15.1%;
     --muted-foreground: 24 5.4% 63.9%;
-    --accent: 18 83% 40%;
+    --accent: 18 83% 35%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -84,5 +84,20 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes scroll {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll var(--scroll-duration) linear infinite var(--scroll-direction);
   }
 }
