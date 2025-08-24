@@ -26,17 +26,16 @@ const RegisterButton = ({ showIcon }: RegisterButtonProps) => {
         <div className="fixed bottom-6 right-6 z-50">
             <Button
                 size="lg"
-                className={`rounded-full shadow-lg hover:scale-105 transition-all duration-300 ease-in-out bg-primary/20 backdrop-blur-lg border border-primary/30 hover:bg-primary/30 text-primary-foreground font-bold h-14 ${
+                className={`rounded-full shadow-lg hover:scale-105 transition-all duration-300 ease-in-out bg-primary/20 backdrop-blur-lg border border-primary/30 hover:bg-primary/30 text-primary-foreground font-bold h-14 flex items-center justify-center ${
                     showIcon ? 'w-14' : 'w-40'
                 }`}
                 onClick={handleClick}
             >
-                <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-                   <Ticket className={`absolute transition-all duration-300 ${showIcon ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`} />
-                    <span className={`absolute transition-all duration-300 whitespace-nowrap ${showIcon ? 'opacity-0' : 'opacity-100'}`}>
-                       Register Now
-                    </span>
-                </div>
+                {showIcon ? (
+                    <Ticket className="h-6 w-6" />
+                ) : (
+                    <span className="whitespace-nowrap">Register Now</span>
+                )}
             </Button>
         </div>
     );
