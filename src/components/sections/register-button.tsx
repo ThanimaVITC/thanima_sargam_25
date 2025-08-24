@@ -24,22 +24,21 @@ const RegisterButton = ({ showIcon }: RegisterButtonProps) => {
     if (!isMounted) return null;
 
     const shouldShowText = !showIcon || isHovered;
-    const shouldShowIcon = showIcon && !isHovered;
 
     return (
         <div 
-            className="fixed bottom-8 right-8 z-50"
+            className="fixed bottom-6 right-6 z-50"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
             <Button
                 size="lg"
-                className={`rounded-full shadow-lg hover:scale-105 transition-all duration-300 ease-in-out bg-primary/20 backdrop-blur-lg border border-primary/30 hover:bg-primary/30 text-primary-foreground font-bold h-16 ${shouldShowText ? 'w-40' : 'w-16'}`}
+                className={`rounded-full shadow-lg hover:scale-105 transition-all duration-300 ease-in-out bg-primary/20 backdrop-blur-lg border border-primary/30 hover:bg-primary/30 text-primary-foreground font-bold h-14 ${shouldShowText ? 'w-36' : 'w-14'}`}
                 onClick={handleClick}
             >
                 <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-                   <Ticket className={`absolute transition-all duration-300 ${shouldShowText ? 'opacity-0 -translate-x-full' : 'opacity-100 translate-x-0'}`} />
-                    <span className={`absolute transition-all duration-300 whitespace-nowrap ${shouldShowText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'}`}>
+                   <Ticket className={`absolute transition-all duration-300 ${shouldShowText ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`} />
+                    <span className={`absolute transition-all duration-300 whitespace-nowrap ${shouldShowText ? 'opacity-100' : 'opacity-0'}`}>
                        Register Now
                     </span>
                 </div>
