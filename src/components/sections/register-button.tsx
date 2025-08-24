@@ -31,11 +31,13 @@ const RegisterButton = ({ showIcon }: RegisterButtonProps) => {
                 }`}
                 onClick={handleClick}
             >
-                {showIcon ? (
-                    <Ticket className="h-6 w-6" />
-                ) : (
-                    <span className="whitespace-nowrap">Register Now</span>
-                )}
+                <div className="transition-all duration-300" style={{ width: showIcon ? '24px' : 'auto' }}>
+                    {showIcon ? (
+                        <Ticket className="h-6 w-6" />
+                    ) : (
+                        <span className="whitespace-nowrap">Register Now</span>
+                    )}
+                </div>
             </Button>
         </div>
     );
