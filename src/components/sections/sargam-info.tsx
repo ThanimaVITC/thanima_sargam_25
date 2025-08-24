@@ -24,42 +24,42 @@ const SargamInfo = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-card border border-border/50 rounded-2xl flex flex-col md:flex-row overflow-hidden shadow-lg">
-            <div className="flex-shrink-0 w-full md:w-1/3 bg-primary/10 p-6 flex items-center justify-center">
+        <div className="max-w-4xl mx-auto bg-card border border-border/50 rounded-2xl flex flex-row overflow-hidden shadow-lg">
+            <div className="flex-shrink-0 w-1/4 md:w-1/3 bg-primary/10 p-4 flex items-center justify-center">
                 <Image
                     src="/sargam_logo.png"
                     alt="Sargam Logo"
                     width={150}
                     height={75}
                     data-ai-hint="event logo"
-                    className="object-contain w-24 md:w-36"
+                    className="object-contain w-20 md:w-36"
                 />
             </div>
-            <div className="flex-grow flex items-center p-4 md:p-8">
-                 <div className="flex flex-col md:flex-row items-center justify-around gap-4 md:gap-8 text-center md:text-left w-full">
+            <div className="flex-grow flex items-center p-2 md:p-8">
+                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-around gap-2 sm:gap-4 md:gap-8 text-left w-full">
                     <div className="flex items-center space-x-2 md:space-x-3">
-                        <Calendar className="h-6 w-6 md:h-8 md:w-8 text-primary" />
-                         <div className='text-left'>
-                            <h3 className="text-lg md:text-xl font-headline font-semibold text-foreground">Date</h3>
-                            <p className="text-muted-foreground text-sm md:text-md">August 30th</p>
+                        <Calendar className="h-5 w-5 md:h-8 md:w-8 text-primary" />
+                         <div>
+                            <h3 className="text-base md:text-xl font-headline font-semibold text-foreground">Date</h3>
+                            <p className="text-muted-foreground text-xs md:text-md">August 30th</p>
                         </div>
                     </div>
-                    <Separator orientation='vertical' className="h-12 bg-border/50 hidden md:block" />
-                    <Separator orientation='horizontal' className="w-24 bg-border/50 md:hidden" />
+                    <Separator orientation='vertical' className="h-12 bg-border/50 hidden sm:block" />
+                    <Separator orientation='horizontal' className="w-full bg-border/50 sm:hidden my-1" />
                      <div className="flex items-center space-x-2 md:space-x-3">
-                        <MapPin className="h-6 w-6 md:h-8 md:w-8 text-primary" />
-                        <div className='text-left'>
-                            <h3 className="text-lg md:text-xl font-headline font-semibold text-foreground">Venue</h3>
-                            <p className="text-muted-foreground text-sm md:text-md">MG Auditorium</p>
+                        <MapPin className="h-5 w-5 md:h-8 md:w-8 text-primary" />
+                        <div>
+                            <h3 className="text-base md:text-xl font-headline font-semibold text-foreground">Venue</h3>
+                            <p className="text-muted-foreground text-xs md:text-md">MG Auditorium</p>
                         </div>
                     </div>
-                     <Separator orientation='vertical' className="h-12 bg-border/50 hidden md:block" />
-                     <Separator orientation='horizontal' className="w-24 bg-border/50 md:hidden" />
+                     <Separator orientation='vertical' className="h-12 bg-border/50 hidden sm:block" />
+                     <Separator orientation='horizontal' className="w-full bg-border/50 sm:hidden my-1" />
                     <div className="flex items-center space-x-2 md:space-x-3">
-                        <Clock className="h-6 w-6 md:h-8 md:w-8 text-primary" />
-                        <div className='text-left'>
-                            <h3 className="text-lg md:text-xl font-headline font-semibold text-foreground">Time</h3>
-                            <p className="text-muted-foreground text-sm md:text-md">9:00 AM Onwards</p>
+                        <Clock className="h-5 w-5 md:h-8 md:w-8 text-primary" />
+                        <div>
+                            <h3 className="text-base md:text-xl font-headline font-semibold text-foreground">Time</h3>
+                            <p className="text-muted-foreground text-xs md:text-md">9:00 AM Onwards</p>
                         </div>
                     </div>
                 </div>
