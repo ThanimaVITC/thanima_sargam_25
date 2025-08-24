@@ -12,14 +12,13 @@ import RegisterButton from '@/components/sections/register-button';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showRegisterIcon, setShowRegisterIcon] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      const scrolled = window.scrollY > 50;
+      setIsScrolled(scrolled);
+      setShowRegisterIcon(window.scrollY > window.innerHeight * 0.9);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -37,7 +36,7 @@ export default function Home() {
         <Gallery />
       </main>
       <Footer />
-      <RegisterButton />
+      <RegisterButton showIcon={showRegisterIcon} />
     </div>
   );
 }
