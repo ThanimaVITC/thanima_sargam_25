@@ -8,17 +8,24 @@ import PromoVideo from '@/components/sections/promo-video';
 import Gallery from '@/components/sections/gallery';
 import Footer from '@/components/layout/footer';
 import SargamInfo from '@/components/sections/sargam-info';
-import Registration from '@/components/sections/registration';
+import RegisterButton from '@/components/sections/register-button';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHeroVisible, setIsHeroVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight * 0.5) {
+      const heroHeight = window.innerHeight;
+      if (window.scrollY > heroHeight * 0.5) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
+      }
+      if (window.scrollY > heroHeight - 100) {
+        setIsHeroVisible(false);
+      } else {
+        setIsHeroVisible(true);
       }
     };
 
@@ -37,7 +44,7 @@ export default function Home() {
         <Gallery />
       </main>
       <Footer />
-      <Registration />
+      <RegisterButton isHeroVisible={isHeroVisible} />
     </div>
   );
 }
