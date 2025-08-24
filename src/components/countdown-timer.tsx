@@ -41,43 +41,43 @@ const CountdownTimer = () => {
 
     return () => clearInterval(timer);
   }, []);
-
-  const timerComponents = [
-    { label: "Days", value: timeLeft.days },
-    { label: "Hours", value: timeLeft.hours },
-    { label: "Minutes", value: timeLeft.minutes },
-    { label: "Seconds", value: timeLeft.seconds },
-  ];
   
   const TimeValue = ({value, isSeconds}: {value: number, isSeconds?: boolean}) => (
       <span key={isSeconds ? value: undefined} className={`font-display text-5xl md:text-7xl lg:text-8xl tracking-wider ${isSeconds ? 'animate-in fade-in-0 slide-in-from-top-4 duration-500' : ''}`}>
           {String(value).padStart(2, "0")}
       </span>
-  )
+  );
+
+  const TimerBlock = ({ value, label, isSeconds }: { value: number; label: string; isSeconds?: boolean }) => (
+    <div className="flex flex-col items-center">
+      <TimeValue value={value} isSeconds={isSeconds} />
+      <span className="text-sm md:text-base font-headline uppercase tracking-widest">{label}</span>
+    </div>
+  );
+
+  const Colon = () => <span className="font-display text-5xl md:text-7xl lg:text-8xl hidden md:inline">:</span>;
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-y-6 md:gap-x-8 text-center text-primary-foreground max-w-md mx-auto md:max-w-none">
-      <div className="flex justify-center items-center gap-x-4 md:gap-x-8">
-        <div className="flex flex-col items-center">
-            <TimeValue value={timeLeft.days} />
-            <span className="text-sm md:text-base font-headline uppercase tracking-widest">Days</span>
-        </div>
-        <span className="font-display text-5xl md:text-7xl lg:text-8xl ml-4 md:ml-8 hidden md:inline">:</span>
-        <div className="flex flex-col items-center">
-             <TimeValue value={timeLeft.hours} />
-            <span className="text-sm md:text-base font-headline uppercase tracking-widest">Hours</span>
-        </div>
+    <div className="flex flex-col md:flex-row items-center justify-center gap-y-6 md:gap-x-4 lg:gap-x-8 text-center text-primary-foreground max-w-md mx-auto md:max-w-none">
+      {/* Mobile Layout: 2x2 grid */}
+      <div className="flex md:hidden justify-center items-center gap-x-8">
+        <TimerBlock value={timeLeft.days} label="Days" />
+        <TimerBlock value={timeLeft.hours} label="Hours" />
       </div>
-      <div className="flex justify-center items-center gap-x-4 md:gap-x-8">
-        <div className="flex flex-col items-center">
-             <TimeValue value={timeLeft.minutes} />
-            <span className="text-sm md:text-base font-headline uppercase tracking-widest">Minutes</span>
-        </div>
-         <span className="font-display text-5xl md:text-7xl lg:text-8xl ml-4 md:ml-8 hidden md:inline">:</span>
-        <div className="flex flex-col items-center">
-             <TimeValue value={timeLeft.seconds} isSeconds />
-            <span className="text-sm md:text-base font-headline uppercase tracking-widest">Seconds</span>
-        </div>
+      <div className="flex md:hidden justify-center items-center gap-x-8">
+        <TimerBlock value={timeLeft.minutes} label="Minutes" />
+        <TimerBlock value={timeLeft.seconds} label="Seconds" isSeconds />
+      </div>
+
+      {/* Desktop Layout: 1x4 grid */}
+      <div className="hidden md:flex justify-center items-center gap-x-4 lg:gap-x-8">
+        <TimerBlock value={timeLeft.days} label="Days" />
+        <Colon />
+        <TimerBlock value={timeLeft.hours} label="Hours" />
+        <Colon />
+        <TimerBlock value={timeLeft.minutes} label="Minutes" />
+        <Colon />
+        <TimerBlock value={timeLeft.seconds} label="Seconds" isSeconds />
       </div>
     </div>
   );
