@@ -32,34 +32,34 @@ const SargamInfo = () => {
                     width={150}
                     height={75}
                     data-ai-hint="event logo"
-                    className="object-contain"
+                    className="object-contain w-24 md:w-36"
                 />
             </div>
-            <div className="flex-grow flex items-center p-6 md:p-8">
-                 <div className="flex flex-col md:flex-row items-center justify-around gap-6 md:gap-8 text-center md:text-left w-full">
-                    <div className="flex items-center space-x-3">
-                        <Calendar className="h-8 w-8 text-primary" />
+            <div className="flex-grow flex items-center p-4 md:p-8">
+                 <div className="flex flex-col md:flex-row items-center justify-around gap-4 md:gap-8 text-center md:text-left w-full">
+                    <div className="flex items-center space-x-2 md:space-x-3">
+                        <Calendar className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                          <div className='text-left'>
-                            <h3 className="text-xl font-headline font-semibold text-foreground">Date</h3>
-                            <p className="text-muted-foreground text-md">August 30th</p>
+                            <h3 className="text-lg md:text-xl font-headline font-semibold text-foreground">Date</h3>
+                            <p className="text-muted-foreground text-sm md:text-md">August 30th</p>
                         </div>
                     </div>
                     <Separator orientation='vertical' className="h-12 bg-border/50 hidden md:block" />
                     <Separator orientation='horizontal' className="w-24 bg-border/50 md:hidden" />
-                     <div className="flex items-center space-x-3">
-                        <MapPin className="h-8 w-8 text-primary" />
+                     <div className="flex items-center space-x-2 md:space-x-3">
+                        <MapPin className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                         <div className='text-left'>
-                            <h3 className="text-xl font-headline font-semibold text-foreground">Venue</h3>
-                            <p className="text-muted-foreground text-md">MG Auditorium</p>
+                            <h3 className="text-lg md:text-xl font-headline font-semibold text-foreground">Venue</h3>
+                            <p className="text-muted-foreground text-sm md:text-md">MG Auditorium</p>
                         </div>
                     </div>
                      <Separator orientation='vertical' className="h-12 bg-border/50 hidden md:block" />
                      <Separator orientation='horizontal' className="w-24 bg-border/50 md:hidden" />
-                    <div className="flex items-center space-x-3">
-                        <Clock className="h-8 w-8 text-primary" />
+                    <div className="flex items-center space-x-2 md:space-x-3">
+                        <Clock className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                         <div className='text-left'>
-                            <h3 className="text-xl font-headline font-semibold text-foreground">Time</h3>
-                            <p className="text-muted-foreground text-md">9:00 AM Onwards</p>
+                            <h3 className="text-lg md:text-xl font-headline font-semibold text-foreground">Time</h3>
+                            <p className="text-muted-foreground text-sm md:text-md">9:00 AM Onwards</p>
                         </div>
                     </div>
                 </div>
