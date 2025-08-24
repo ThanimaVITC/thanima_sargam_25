@@ -10,19 +10,29 @@ import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const galleryImages = [
-  { src: 'https://placehold.co/600x400.png', alt: 'Stage performance', hint: 'stage performance', className: "md:col-span-2" },
-  { src: 'https://placehold.co/400x600.png', alt: 'Audience enjoying', hint: 'audience concert', className: "md:row-span-2" },
-  { src: 'https://placehold.co/400x600.png', alt: 'Singer on stage', hint: 'singer concert', className: "md:row-span-2" },
-  { src: 'https://placehold.co/600x400.png', alt: 'Cultural dance', hint: 'cultural dance', className: "md:col-span-2" },
-
-  { src: 'https://placehold.co/400x600.png', alt: 'Event decoration', hint: 'event decoration', className: "md:row-span-2" },
-  { src: 'https://placehold.co/600x400.png', alt: 'Band playing music', hint: 'music band', className: "md:col-span-2" },
-  { src: 'https://placehold.co/400x600.png', alt: 'Lighting setup', hint: 'event lighting', className: "md:row-span-2" },
-  { src: 'https://placehold.co/600x400.png', alt: 'Traditional attire', hint: 'traditional attire', className: "md:col-span-2" },
+  { src: 'https://placehold.co/600x400.png', alt: 'Stage performance', hint: 'stage performance' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Cultural dance', hint: 'cultural dance' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Band playing music', hint: 'music band' },
+  { src: 'https://placehold.co/400x600.png', alt: 'Audience enjoying', hint: 'audience concert' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Singer on stage', hint: 'singer concert' },
+  { src: 'https://placehold.co/400x600.png', alt: 'Event decoration', hint: 'event decoration' },
 ];
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const renderImage = (image: any, width: number, height: number, className: string = "") => (
+    <div className={cn("group rounded-lg overflow-hidden cursor-pointer", className)} onClick={() => setSelectedImage(image.src)}>
+      <Image
+        src={image.src}
+        alt={image.alt}
+        width={width}
+        height={height}
+        data-ai-hint={image.hint}
+        className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+      />
+    </div>
+  )
 
   return (
     <section id="gallery" className="py-20 md:py-32 bg-background">
@@ -33,20 +43,38 @@ const Gallery = () => {
             A glimpse into the magic of our past events.
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 md:auto-rows-[1fr] gap-4">
-            {galleryImages.slice(0, 4).map((image, index) => (
-                 <div key={index} className={cn("group rounded-lg overflow-hidden cursor-pointer", image.className)} onClick={() => setSelectedImage(image.src)}>
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      width={index === 1 || index === 2 ? 400 : 600}
-                      height={index === 1 || index === 2 ? 600 : 400}
-                      data-ai-hint={image.hint}
-                      className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                    />
-                  </div>
-            ))}
+        
+        <div className="hidden md:grid md:grid-cols-3 md:grid-rows-3 gap-4 h-[620px]">
+            <div className="col-span-1 row-span-3 grid grid-rows-3 gap-4">
+                {renderImage(galleryImages[0], 600, 400, "row-span-1")}
+                {renderImage(galleryImages[1], 600, 400, "row-span-1")}
+                {renderImage(galleryImages[2], 600, 400, "row-span-1")}
+            </div>
+            <div className="col-span-1 row-span-3">
+                 {renderImage(galleryImages[3], 400, 600, "h-full")}
+            </div>
+            <div className="col-span-1 row-span-3 grid grid-rows-3 gap-4">
+                {renderImage(galleryImages[4], 600, 400, "row-span-1")}
+                {renderImage(galleryImages[5], 400, 600, "row-span-2")}
+            </div>
         </div>
+
+        {/* Mobile View */}
+        <div className="grid grid-cols-2 md:hidden gap-4">
+            {galleryImages.map((image, index) => (
+                <div key={index} className="group rounded-lg overflow-hidden cursor-pointer" onClick={() => setSelectedImage(image.src)}>
+                   <Image
+                     src={image.src}
+                     alt={image.alt}
+                     width={400}
+                     height={600}
+                     data-ai-hint={image.hint}
+                     className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                   />
+                 </div>
+           ))}
+       </div>
+
         <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline">
                 <Link href="/gallery">
