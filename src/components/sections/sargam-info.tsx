@@ -1,6 +1,16 @@
 import { MapPin, Calendar, Clock, SeparatorVertical } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
+const timelineEvents = [
+  { time: "9:00 AM", event: "Inauguration" },
+  { time: "9:10 AM", event: "Welcome Speech" },
+  { time: "9:20 AM", event: "Welcoming the Guest and Speech" },
+  { time: "10:00 AM", event: "Cultural Program Starts" },
+  { time: "10:30 AM", event: "Onam Games Starts (outside MG)" },
+  { time: "12:00 PM", event: "Onam Sadya Starts" },
+  { time: "6:00 PM", event: "Chendamela Starts" },
+];
+
 const SargamInfo = () => {
   return (
     <section id="sargam-info" className="py-20 md:py-32 bg-background">
@@ -37,6 +47,22 @@ const SargamInfo = () => {
                         <p className="text-muted-foreground text-md">9:00 AM Onwards</p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div className="mt-16">
+            <h3 className="text-3xl font-headline font-bold text-center text-primary mb-12">Event Timeline</h3>
+            <div className="relative max-w-2xl mx-auto">
+                <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border/50"></div>
+                {timelineEvents.map((item, index) => (
+                    <div key={index} className="relative flex items-center mb-8">
+                        <div className={`w-1/2 pr-8 text-right ${index % 2 === 0 ? 'text-right' : 'text-left ml-auto pl-8'}`}>
+                            <p className="font-bold text-lg text-foreground">{item.time}</p>
+                            <p className="text-muted-foreground">{item.event}</p>
+                        </div>
+                        <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    </div>
+                ))}
             </div>
         </div>
       </div>
