@@ -1,3 +1,4 @@
+
 import { MapPin, Calendar, Clock, SeparatorVertical } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
@@ -55,12 +56,24 @@ const SargamInfo = () => {
             <div className="relative max-w-2xl mx-auto">
                 <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border/50"></div>
                 {timelineEvents.map((item, index) => (
-                    <div key={index} className="relative flex items-center mb-8">
-                        <div className={`w-1/2 pr-8 text-right ${index % 2 === 0 ? 'text-right' : 'text-left ml-auto pl-8'}`}>
-                            <p className="font-bold text-lg text-foreground">{item.time}</p>
-                            <p className="text-muted-foreground">{item.event}</p>
-                        </div>
-                        <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    <div key={index} className="relative flex items-center justify-center mb-8">
+                         <div className="absolute w-4 h-4 bg-primary rounded-full border-4 border-background z-10"></div>
+                         {index % 2 === 0 ? (
+                             <div className="w-1/2 pr-8 text-right">
+                                 <p className="font-bold text-lg text-foreground">{item.time}</p>
+                                 <p className="text-muted-foreground">{item.event}</p>
+                             </div>
+                         ) : (
+                             <div className="w-1/2"></div>
+                         )}
+                         {index % 2 !== 0 ? (
+                             <div className="w-1/2 pl-8 text-left">
+                                 <p className="font-bold text-lg text-foreground">{item.time}</p>
+                                 <p className="text-muted-foreground">{item.event}</p>
+                             </div>
+                         ) : (
+                            <div className="w-1/2"></div>
+                         )}
                     </div>
                 ))}
             </div>
