@@ -18,10 +18,12 @@ export default function Home() {
     const handleScroll = () => {
       const scrolled = window.scrollY > 50;
       setIsScrolled(scrolled);
-      setShowRegisterIcon(window.scrollY > window.innerHeight * 0.9);
+      // Show icon when scrolled past the hero section (approx 100vh)
+      setShowRegisterIcon(window.scrollY > window.innerHeight);
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check on initial load
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
