@@ -2,11 +2,9 @@
 "use client";
 
 import Image from 'next/image';
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import ImagePopup from '@/components/image-popup';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
+import Header from '@/components/layout/header';
 
 const allGalleryImages = [
   // This can be expanded with more images for the full gallery page
@@ -31,21 +29,20 @@ const allGalleryImages = [
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-background min-h-screen">
-       <header className="sticky top-0 z-40 bg-background/50 backdrop-blur-lg shadow-md">
-           <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-                <h1 className="text-3xl font-headline font-bold text-primary">Gallery</h1>
-                <Button asChild variant="ghost">
-                    <Link href="/">
-                        <ArrowLeft className="mr-2 h-4 w-4" />
-                        Back to Home
-                    </Link>
-                </Button>
-           </div>
-       </header>
-
-      <main className="container mx-auto px-4 py-12">
+      <Header isVisible={true} />
+      <main className="container mx-auto px-4 py-28">
+        <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Gallery</h1>
+            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+                A collection of moments from past Sargam celebrations.
+            </p>
+        </div>
         <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
           {allGalleryImages.map((image, index) => (
             <div key={index} className="break-inside-avoid" onClick={() => setSelectedImage(image.src)}>

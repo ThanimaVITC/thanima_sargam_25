@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 type HeaderProps = {
   isVisible: boolean;
@@ -12,7 +13,7 @@ const Header = ({ isVisible }: HeaderProps) => {
       }`}
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div className="flex items-center space-x-4">
+        <Link href="/" className="flex items-center space-x-4">
           <Image
             src="/sargam_logo.png"
             alt="Sargam Logo"
@@ -22,12 +23,12 @@ const Header = ({ isVisible }: HeaderProps) => {
             className="object-contain"
           />
           <h1 className="text-2xl font-headline font-bold text-primary">Sargam</h1>
-        </div>
+        </Link>
         <nav className="hidden md:flex space-x-6 items-center">
-            <a href="#sargam-info" className="font-headline text-foreground hover:text-primary transition-colors">Sargam</a>
-            <a href="#about" className="font-headline text-foreground hover:text-primary transition-colors">About</a>
-            <a href="#video" className="font-headline text-foreground hover:text-primary transition-colors">Video</a>
-            <a href="#gallery" className="font-headline text-foreground hover:text-primary transition-colors">Gallery</a>
+            <a href="/#sargam-info" className="font-headline text-foreground hover:text-primary transition-colors">Sargam</a>
+            <a href="/#about" className="font-headline text-foreground hover:text-primary transition-colors">About</a>
+            <a href="/#video" className="font-headline text-foreground hover:text-primary transition-colors">Video</a>
+            <Link href="/gallery" className="font-headline text-foreground hover:text-primary transition-colors">Gallery</Link>
         </nav>
       </div>
     </header>
