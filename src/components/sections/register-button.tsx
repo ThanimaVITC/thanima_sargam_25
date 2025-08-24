@@ -37,7 +37,7 @@ const RegisterButton = ({ showIcon }: RegisterButtonProps) => {
                 onClick={handleClick}
             >
                 <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-                   <Ticket className={`absolute transition-all duration-300 ${!shouldShowText ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`} />
+                   <Ticket className={`absolute transition-all duration-300 ${shouldShowText ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`} />
                     <span className={`absolute transition-all duration-300 whitespace-nowrap ${shouldShowText ? 'opacity-100' : 'opacity-0'}`}>
                        Register Now
                     </span>
