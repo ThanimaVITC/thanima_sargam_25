@@ -9,13 +9,13 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 const galleryImages = [
-  { src: 'https://placehold.co/400x600.png', alt: 'Stage performance', hint: 'stage performance' },
-  { src: 'https://placehold.co/400x500.png', alt: 'Audience enjoying', hint: 'audience concert' },
-  { src: 'https://placehold.co/400x600.png', alt: 'Cultural dance', hint: 'cultural dance' },
-  { src: 'https://placehold.co/400x550.png', alt: 'Singer on stage', hint: 'singer concert' },
-  { src: 'https://placehold.co/400x550.png', alt: 'Event decoration', hint: 'event decoration' },
-  { src: 'https://placehold.co/400x600.png', alt: 'Band playing music', hint: 'music band' },
-  { src: 'https://placehold.co/400x500.png', alt: 'Traditional attire', hint: 'traditional attire' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Stage performance', hint: 'stage performance' },
+  { src: 'https://placehold.co/400x600.png', alt: 'Audience enjoying', hint: 'audience concert' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Cultural dance', hint: 'cultural dance' },
+  { src: 'https://placehold.co/400x600.png', alt: 'Singer on stage', hint: 'singer concert' },
+  { src: 'https://placehold.co/400x600.png', alt: 'Event decoration', hint: 'event decoration' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Band playing music', hint: 'music band' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Traditional attire', hint: 'traditional attire' },
   { src: 'https://placehold.co/400x600.png', alt: 'Lighting setup', hint: 'event lighting' },
 ];
 
@@ -37,8 +37,8 @@ const Gallery = () => {
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      width={400}
-                      height={600}
+                      width={600}
+                      height={400}
                       data-ai-hint={image.hint}
                       className="w-full h-auto object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                     />
