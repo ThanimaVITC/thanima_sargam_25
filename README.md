@@ -10,7 +10,6 @@ This project is built with a modern web stack, including:
 - **UI Library:** [React](https://reactjs.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Component Library:** [ShadCN UI](https://ui.shadcn.com/)
-- **AI/Generative Features:** [Genkit (Firebase)](https://firebase.google.com/docs/genkit)
 
 ## About the Developer
 
