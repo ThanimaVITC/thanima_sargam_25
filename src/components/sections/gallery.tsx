@@ -7,16 +7,18 @@ import Link from 'next/link';
 import ImagePopup from '@/components/image-popup';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const galleryImages = [
-  { src: 'https://placehold.co/600x400.png', alt: 'Stage performance', hint: 'stage performance' },
-  { src: 'https://placehold.co/400x600.png', alt: 'Audience enjoying', hint: 'audience concert' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Cultural dance', hint: 'cultural dance' },
-  { src: 'https://placehold.co/400x600.png', alt: 'Singer on stage', hint: 'singer concert' },
-  { src: 'https://placehold.co/400x600.png', alt: 'Event decoration', hint: 'event decoration' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Band playing music', hint: 'music band' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Traditional attire', hint: 'traditional attire' },
-  { src: 'https://placehold.co/400x600.png', alt: 'Lighting setup', hint: 'event lighting' },
+  { src: 'https://placehold.co/600x400.png', alt: 'Stage performance', hint: 'stage performance', className: "md:col-span-2" },
+  { src: 'https://placehold.co/400x600.png', alt: 'Audience enjoying', hint: 'audience concert', className: "md:row-span-2" },
+  { src: 'https://placehold.co/400x600.png', alt: 'Singer on stage', hint: 'singer concert', className: "md:row-span-2" },
+  { src: 'https://placehold.co/600x400.png', alt: 'Cultural dance', hint: 'cultural dance', className: "md:col-span-2" },
+
+  { src: 'https://placehold.co/400x600.png', alt: 'Event decoration', hint: 'event decoration', className: "md:row-span-2" },
+  { src: 'https://placehold.co/600x400.png', alt: 'Band playing music', hint: 'music band', className: "md:col-span-2" },
+  { src: 'https://placehold.co/400x600.png', alt: 'Lighting setup', hint: 'event lighting', className: "md:row-span-2" },
+  { src: 'https://placehold.co/600x400.png', alt: 'Traditional attire', hint: 'traditional attire', className: "md:col-span-2" },
 ];
 
 const Gallery = () => {
@@ -31,16 +33,16 @@ const Gallery = () => {
             A glimpse into the magic of our past events.
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {galleryImages.map((image, index) => (
-                 <div key={index} className="group rounded-lg overflow-hidden cursor-pointer" onClick={() => setSelectedImage(image.src)}>
+        <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 md:auto-rows-[1fr] gap-4">
+            {galleryImages.slice(0, 4).map((image, index) => (
+                 <div key={index} className={cn("group rounded-lg overflow-hidden cursor-pointer", image.className)} onClick={() => setSelectedImage(image.src)}>
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      width={600}
-                      height={400}
+                      width={index === 1 || index === 2 ? 400 : 600}
+                      height={index === 1 || index === 2 ? 600 : 400}
                       data-ai-hint={image.hint}
-                      className="w-full h-auto object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                     />
                   </div>
             ))}
