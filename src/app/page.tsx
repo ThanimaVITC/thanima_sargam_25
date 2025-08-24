@@ -12,20 +12,13 @@ import RegisterButton from '@/components/sections/register-button';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isHeroVisible, setIsHeroVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = window.innerHeight;
-      if (window.scrollY > heroHeight * 0.5) {
+      if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
-      }
-      if (window.scrollY > heroHeight - 100) {
-        setIsHeroVisible(false);
-      } else {
-        setIsHeroVisible(true);
       }
     };
 
@@ -44,7 +37,7 @@ export default function Home() {
         <Gallery />
       </main>
       <Footer />
-      <RegisterButton isHeroVisible={isHeroVisible} />
+      <RegisterButton />
     </div>
   );
 }
