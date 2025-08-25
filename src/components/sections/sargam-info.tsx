@@ -46,7 +46,7 @@ const SargamInfo = () => {
                         <Calendar className="h-4 w-4 sm:h-5 sm:w-5 md:h-8 md:w-8 text-primary flex-shrink-0" />
                          <div>
                             <h3 className="text-xs sm:text-base md:text-xl font-semibold text-foreground">Date</h3>
-                            <p className="text-muted-foreground text-[10px] sm:text-sm md:text-base font-body">August 30th</p>
+                            <p className="text-primary text-[10px] sm:text-sm md:text-base font-body">August 30th</p>
                         </div>
                     </div>
                     <Separator orientation='vertical' className="h-12 bg-border/50 hidden sm:block" />
@@ -55,7 +55,7 @@ const SargamInfo = () => {
                         <MapPin className="h-4 w-4 sm:h-5 sm:w-5 md:h-8 md:w-8 text-primary flex-shrink-0" />
                         <div>
                             <h3 className="text-xs sm:text-base md:text-xl font-semibold text-foreground">Venue</h3>
-                            <p className="text-muted-foreground text-[10px] sm:text-sm md:text-base font-body">MG Auditorium</p>
+                            <p className="text-primary text-[10px] sm:text-sm md:text-base font-body">MG Auditorium</p>
                         </div>
                     </div>
                      <Separator orientation='vertical' className="h-12 bg-border/50 hidden sm:block" />
@@ -64,7 +64,7 @@ const SargamInfo = () => {
                         <Clock className="h-4 w-4 sm:h-5 sm:w-5 md:h-8 md:w-8 text-primary flex-shrink-0" />
                         <div>
                             <h3 className="text-xs sm:text-base md:text-xl font-semibold text-foreground">Time</h3>
-                            <p className="text-muted-foreground text-[10px] sm:text-sm md:text-base font-body">9:00 AM Onwards</p>
+                            <p className="text-primary text-[10px] sm:text-sm md:text-base font-body">9:00 AM Onwards</p>
                         </div>
                     </div>
                 </div>
