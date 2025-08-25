@@ -31,7 +31,7 @@ const About = () => {
                   </div>
                   <div>
                       <h4 className="text-xl font-tankindred font-semibold text-foreground">Our Mission</h4>
-                      <p className="text-muted-foreground mt-2">To provide a platform for artistic expression, nurture emerging talent, and create high-quality cultural events that inspire and unite our community.</p>
+                      <p className="text-muted-foreground mt-2 font-body">To provide a platform for artistic expression, nurture emerging talent, and create high-quality cultural events that inspire and unite our community.</p>
                   </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -42,7 +42,7 @@ const About = () => {
                   </div>
                   <div>
                       <h4 className="text-xl font-tankindred font-semibold text-foreground">Our Vision</h4>
-                      <p className="text-muted-foreground mt-2">To be a leading name in cultural event organization, known for our innovation, quality, and commitment to preserving and promoting artistic traditions.</p>
+                      <p className="text-muted-foreground mt-2 font-body">To be a leading name in cultural event organization, known for our innovation, quality, and commitment to preserving and promoting artistic traditions.</p>
                   </div>
               </div>
             </div>
