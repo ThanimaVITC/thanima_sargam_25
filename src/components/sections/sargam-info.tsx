@@ -126,6 +126,9 @@ const SargamInfo = () => {
                            ))}
                         </div>
                      </div>
+                     <div>
+                        <p className="text-primary font-bold animate-pulse">Registrations starting soon!</p>
+                     </div>
                 </div>
             </div>
         </div>
