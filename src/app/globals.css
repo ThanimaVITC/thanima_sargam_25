@@ -9,6 +9,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Barbra';
+  src: url('/fonts/barbra-font/Barbra-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }

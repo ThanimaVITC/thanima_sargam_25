@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['"PT Sans"', 'sans-serif'],
-        headline: ['"Gambarino"', 'serif'],
+        body: ['"Gambarino"', 'serif'],
+        headline: ['"Barbra"', 'sans-serif'],
         display: ['"Melodrama"', 'serif'],
         tankindred: ['"Tankindred Display"', 'sans-serif'],
         code: ['monospace'],
