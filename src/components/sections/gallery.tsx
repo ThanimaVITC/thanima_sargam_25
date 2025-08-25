@@ -13,9 +13,9 @@ const galleryImages = [
   { src: '/img1.jpg', alt: 'Stage performance', hint: 'stage performance' },
   { src: '/img2.jpg', alt: 'Cultural dance', hint: 'cultural dance' },
   { src: '/img3.jpg', alt: 'Band playing music', hint: 'music band' },
-  { src: 'https://placehold.co/400x600.png', alt: 'Audience enjoying', hint: 'audience concert' },
+  { src: '/img6.jpg', alt: 'Audience enjoying', hint: 'audience concert' },
   { src: '/img4.jpg', alt: 'Singer on stage', hint: 'singer concert' },
-  { src: 'https://placehold.co/400x600.png', alt: 'Event decoration', hint: 'event decoration' },
+  { src: '/img5.jpg', alt: 'Event decoration', hint: 'event decoration' },
 ];
 
 const Gallery = () => {
