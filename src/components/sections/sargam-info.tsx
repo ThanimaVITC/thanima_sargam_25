@@ -23,7 +23,7 @@ const SargamInfo = () => {
     <section id="sargam-info" className="py-20 md:py-32 bg-background font-body">
       <div className="container mx-auto px-4 w-[90%]">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-tankindred font-bold text-primary">What is Sargam?</h2>
+          <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary">What is Sargam?</h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
             Sargam is the Onam celebration of VIT Chennai, a vibrant expression of culture, art, and togetherness.
           </p>
@@ -83,7 +83,7 @@ const SargamInfo = () => {
                                 <div className="flex justify-end pr-8 text-right">
                                     <div>
                                         <p className="font-bold text-lg text-foreground">{item.time}</p>
-                                        <p className="text-muted-foreground">{item.event}</p>
+                                        <p className="text-muted-foreground font-body">{item.event}</p>
                                     </div>
                                 </div>
                             ) : <div />}
@@ -95,7 +95,7 @@ const SargamInfo = () => {
                            {index % 2 !== 0 ? (
                              <div className="pl-8 text-left">
                                  <p className="font-bold text-lg text-foreground">{item.time}</p>
-                                 <p className="text-muted-foreground">{item.event}</p>
+                                 <p className="text-muted-foreground font-body">{item.event}</p>
                              </div>
                            ) : <div />}
                         </div>
@@ -118,7 +118,7 @@ const SargamInfo = () => {
                      <div className="w-full mb-6">
                         <h4 className="text-2xl font-tankindred font-semibold text-primary mb-4 flex items-center justify-center gap-2"><Trophy className="h-6 w-6"/> Events</h4>
                         <Separator className='w-1/4 mx-auto mb-4' />
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 text-muted-foreground text-left">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3 text-muted-foreground text-left font-body">
                            {sportsEvents.map((event, index) => (
                                <div key={index} className="flex justify-center md:justify-start">
                                     <p>{event}</p>
@@ -139,5 +139,3 @@ const SargamInfo = () => {
 };
 
 export default SargamInfo;
-
-    
