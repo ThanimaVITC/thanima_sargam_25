@@ -3,10 +3,10 @@ import { Users, Target, Eye } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 md:py-32 bg-background">
+    <section id="about" className="py-20 md:py-32 bg-background font-body">
       <div className="container mx-auto px-4 w-[90%]">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary">What is Thanima?</h2>
+          <h2 className="text-4xl md:text-5xl font-tankindred font-bold text-primary">What is Thanima?</h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
             Discover the heart and soul behind Sargam.
           </p>
@@ -14,7 +14,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
-                <h3 className="text-3xl font-headline font-semibold text-foreground">A Legacy of Culture &amp; Art</h3>
+                <h3 className="text-3xl font-tankindred font-semibold text-foreground">A Legacy of Culture &amp; Art</h3>
                 <p className="text-muted-foreground leading-relaxed">
                     Thanima is more than just a club; it's a vibrant community dedicated to celebrating and promoting cultural heritage through the arts. We believe in the power of music, dance, and creative expression to bring people together and create unforgettable experiences. Our events are a testament to our passion for fostering talent and sharing the richness of our traditions with a modern audience.
                 </p>
@@ -30,7 +30,7 @@ const About = () => {
                       </div>
                   </div>
                   <div>
-                      <h4 className="text-xl font-headline font-semibold text-foreground">Our Mission</h4>
+                      <h4 className="text-xl font-tankindred font-semibold text-foreground">Our Mission</h4>
                       <p className="text-muted-foreground mt-2">To provide a platform for artistic expression, nurture emerging talent, and create high-quality cultural events that inspire and unite our community.</p>
                   </div>
               </div>
@@ -41,7 +41,7 @@ const About = () => {
                       </div>
                   </div>
                   <div>
-                      <h4 className="text-xl font-headline font-semibold text-foreground">Our Vision</h4>
+                      <h4 className="text-xl font-tankindred font-semibold text-foreground">Our Vision</h4>
                       <p className="text-muted-foreground mt-2">To be a leading name in cultural event organization, known for our innovation, quality, and commitment to preserving and promoting artistic traditions.</p>
                   </div>
               </div>

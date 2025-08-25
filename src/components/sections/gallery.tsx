@@ -35,10 +35,10 @@ const Gallery = () => {
   )
 
   return (
-    <section id="gallery" className="py-20 md:py-32 bg-background">
+    <section id="gallery" className="py-20 md:py-32 bg-background font-body">
       <div className="container mx-auto px-4 w-[90%]">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary">Moments from Sargam 24</h2>
+          <h2 className="text-4xl md:text-5xl font-tankindred font-bold text-primary">Moments from Sargam 24</h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
             A glimpse into the magic of our past events.
           </p>
@@ -76,7 +76,7 @@ const Gallery = () => {
        </div>
 
         <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline" className="font-tankindred">
                 <Link href="/gallery">
                     View Full Gallery <ArrowRight className="ml-2" />
                 </Link>

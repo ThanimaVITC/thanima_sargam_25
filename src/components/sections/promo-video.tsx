@@ -1,9 +1,9 @@
 const PromoVideo = () => {
   return (
-    <section id="video" className="py-20 md:py-32 bg-card">
+    <section id="video" className="py-20 md:py-32 bg-card font-body">
       <div className="container mx-auto px-4 w-[90%]">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary">Feel the Vibe</h2>
+          <h2 className="text-4xl md:text-5xl font-tankindred font-bold text-primary">Feel the Vibe</h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
             Watch the official promo and get ready for an unforgettable experience.
           </p>
