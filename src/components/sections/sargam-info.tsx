@@ -73,7 +73,7 @@ const SargamInfo = () => {
 
 
         <div className="mt-20">
-            <h3 className="text-3xl font-tankindred font-bold text-center text-primary mb-12">Main Event Timeline (Aug 30)</h3>
+            <h3 className="text-2xl font-tankindred font-bold text-center text-primary mb-12">Main Event Timeline (Aug 30)</h3>
             <div className="relative max-w-2xl mx-auto font-body">
                 <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border/50"></div>
                 {timelineEvents.map((item, index) => (
@@ -105,7 +105,7 @@ const SargamInfo = () => {
         </div>
 
         <div className="mt-20">
-            <h3 className="text-3xl font-tankindred font-bold text-center text-primary mb-12">Sargam Sports (Aug 28)</h3>
+            <h3 className="text-2xl font-tankindred font-bold text-center text-primary mb-12">Sargam Sports (Aug 28)</h3>
             <div className="max-w-3xl mx-auto">
                 <div className="flex flex-col items-center text-center p-8 bg-card border border-border/50 rounded-2xl shadow-lg font-body">
                      <div className="flex items-center space-x-3 mb-6 font-headline">
