@@ -10,11 +10,11 @@ import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const galleryImages = [
-  { src: 'https://placehold.co/600x400.png', alt: 'Stage performance', hint: 'stage performance' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Cultural dance', hint: 'cultural dance' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Band playing music', hint: 'music band' },
+  { src: '/img1.jpg', alt: 'Stage performance', hint: 'stage performance' },
+  { src: '/img2.jpg', alt: 'Cultural dance', hint: 'cultural dance' },
+  { src: '/img3.jpg', alt: 'Band playing music', hint: 'music band' },
   { src: 'https://placehold.co/400x600.png', alt: 'Audience enjoying', hint: 'audience concert' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Singer on stage', hint: 'singer concert' },
+  { src: '/img4.jpg', alt: 'Singer on stage', hint: 'singer concert' },
   { src: 'https://placehold.co/400x600.png', alt: 'Event decoration', hint: 'event decoration' },
 ];
 

@@ -19,10 +19,10 @@ const fetchGalleryImages = async () => {
     // We'll simulate a delay to show the loading state.
     await new Promise(resolve => setTimeout(resolve, 1500));
     return [
-        { src: 'https://placehold.co/400x600.png', alt: 'Stage performance', hint: 'stage performance' },
-        { src: 'https://placehold.co/400x500.png', alt: 'Audience enjoying', hint: 'audience concert' },
-        { src: 'https://placehold.co/400x600.png', alt: 'Cultural dance', hint: 'cultural dance' },
-        { src: 'https://placehold.co/400x550.png', alt: 'Singer on stage', hint: 'singer concert' },
+        { src: '/img1.jpg', alt: 'Stage performance', hint: 'stage performance' },
+        { src: '/img2.jpg', alt: 'Audience enjoying', hint: 'audience concert' },
+        { src: '/img3.jpg', alt: 'Cultural dance', hint: 'cultural dance' },
+        { src: '/img4.jpg', alt: 'Singer on stage', hint: 'singer concert' },
         { src: 'https://placehold.co/400x550.png', alt: 'Event decoration', hint: 'event decoration' },
         { src: 'https://placehold.co/400x600.png', alt: 'Band playing music', hint: 'music band' },
         { src: 'https://placehold.co/400x500.png', alt: 'Traditional attire', hint: 'traditional attire' },
