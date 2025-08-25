@@ -29,7 +29,7 @@ const SargamInfo = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto bg-card border-border/50 rounded-2xl flex flex-row overflow-hidden shadow-lg font-headline">
+        <div className="max-w-5xl mx-auto bg-card border-border/50 rounded-2xl flex flex-row overflow-hidden shadow-lg">
             <div className="flex-shrink-0 w-[80px] sm:w-[150px] bg-primary/10 p-4 flex items-center justify-center">
                 <Image
                     src="/sargam_logo.png"
@@ -45,8 +45,8 @@ const SargamInfo = () => {
                     <div className="flex items-center space-x-2 md:space-x-3">
                         <Calendar className="h-4 w-4 sm:h-5 sm:w-5 md:h-8 md:w-8 text-primary flex-shrink-0" />
                          <div>
-                            <h3 className="text-xs sm:text-base md:text-xl font-semibold text-foreground">Date</h3>
-                            <p className="text-primary text-[10px] sm:text-sm md:text-base font-body">August 30th</p>
+                            <h3 className="text-xs sm:text-base md:text-xl font-body font-semibold text-primary">Date</h3>
+                            <p className="text-foreground text-[10px] sm:text-sm md:text-base font-headline">August 30th</p>
                         </div>
                     </div>
                     <Separator orientation='vertical' className="h-12 bg-border/50 hidden sm:block" />
@@ -54,8 +54,8 @@ const SargamInfo = () => {
                      <div className="flex items-center space-x-2 md:space-x-3">
                         <MapPin className="h-4 w-4 sm:h-5 sm:w-5 md:h-8 md:w-8 text-primary flex-shrink-0" />
                         <div>
-                            <h3 className="text-xs sm:text-base md:text-xl font-semibold text-foreground">Venue</h3>
-                            <p className="text-primary text-[10px] sm:text-sm md:text-base font-body">MG Auditorium</p>
+                            <h3 className="text-xs sm:text-base md:text-xl font-body font-semibold text-primary">Venue</h3>
+                            <p className="text-foreground text-[10px] sm:text-sm md:text-base font-headline">MG Auditorium</p>
                         </div>
                     </div>
                      <Separator orientation='vertical' className="h-12 bg-border/50 hidden sm:block" />
@@ -63,8 +63,8 @@ const SargamInfo = () => {
                     <div className="flex items-center space-x-2 md:space-x-3">
                         <Clock className="h-4 w-4 sm:h-5 sm:w-5 md:h-8 md:w-8 text-primary flex-shrink-0" />
                         <div>
-                            <h3 className="text-xs sm:text-base md:text-xl font-semibold text-foreground">Time</h3>
-                            <p className="text-primary text-[10px] sm:text-sm md:text-base font-body">9:00 AM Onwards</p>
+                            <h3 className="text-xs sm:text-base md:text-xl font-body font-semibold text-primary">Time</h3>
+                            <p className="text-foreground text-[10px] sm:text-sm md:text-base font-headline">9:00 AM Onwards</p>
                         </div>
                     </div>
                 </div>
