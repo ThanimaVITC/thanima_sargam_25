@@ -9,6 +9,7 @@ import Gallery from '@/components/sections/gallery';
 import Footer from '@/components/layout/footer';
 import SargamInfo from '@/components/sections/sargam-info';
 import RegisterButton from '@/components/sections/register-button';
+import CelebrityGuest from '@/components/sections/celebrity-guest';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,6 +33,7 @@ export default function Home() {
       <Header isVisible={isScrolled} />
       <main className="flex-grow">
         <Hero isHeaderVisible={isScrolled} />
+        <CelebrityGuest />
         <SargamInfo />
         <About />
         <PromoVideo />
