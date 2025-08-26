@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 type HeaderProps = {
@@ -71,13 +71,8 @@ const Header = ({ isVisible }: HeaderProps) => {
             </SheetTrigger>
             <SheetContent side="right" className="w-[250px] bg-background p-6">
               <SheetTitle className="sr-only">Menu</SheetTitle>
-              <div className="flex flex-col space-y-6">
-                <div className='flex justify-between items-center'>
-                    <h2 className="text-xl font-headline text-primary">Menu</h2>
-                    <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
-                        <X className='h-6 w-6 text-foreground' />
-                    </Button>
-                </div>
+              <div className="flex flex-col space-y-6 pt-6">
+                <h2 className="text-xl font-headline text-primary">Menu</h2>
                 <nav className="flex flex-col space-y-4">
                   {navLinks.map(link => (
                     link.isLink ? (
