@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -70,6 +70,7 @@ const Header = ({ isVisible }: HeaderProps) => {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[250px] bg-background p-6">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
               <div className="flex flex-col space-y-6">
                 <div className='flex justify-between items-center'>
                     <h2 className="text-xl font-headline text-primary">Menu</h2>
