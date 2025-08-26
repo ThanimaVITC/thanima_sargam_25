@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Sargam 25 - The Official Onam Celebration of VIT Chennai',
     description: 'Experience the magic of Onam with Sargam 25 at VIT Chennai. A vibrant celebration of culture, art, and togetherness.',
-    url: 'https://sargam.com',
+    url: 'https://thanimavitc.site',
     siteName: 'Sargam 25',
     images: [
       {
@@ -57,7 +57,7 @@ export default function RootLayout({
         <link href="https://api.fontshare.com/v2/css?f[]=gambarino&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet" />
       </head>
-      <body className="antialiased">
+      <body className="antialiased font-body">
         {children}
         <Toaster />
       </body>
