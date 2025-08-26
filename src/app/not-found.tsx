@@ -17,7 +17,7 @@ export default function NotFound() {
           width={250}
           height={250}
           data-ai-hint="confused man"
-          className="mx-auto mb-8 rounded-full"
+          className="mx-auto mb-8 rounded-lg"
         />
         <h1 className="font-chilanka text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-8">
           എടാ മോനെ അത് ലൊക്കാ.. <br/> ഇങ്ങ് പോര്, ഇങ്ങ് പോര്, ഇങ്ങ് പോര്...
