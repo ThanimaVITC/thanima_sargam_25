@@ -18,6 +18,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://api.fontshare.com/v2/css?f[]=gambarino&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet" />
       </head>
       <body className="antialiased">
         {children}

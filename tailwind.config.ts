@@ -14,6 +14,7 @@ export default {
         headline: ['"Barbra"', 'sans-serif'],
         display: ['"Melodrama"', 'serif'],
         tankindred: ['"Tankindred Display"', 'sans-serif'],
+        chilanka: ['"Chilanka"', 'cursive'],
         code: ['monospace'],
       },
       colors: {
