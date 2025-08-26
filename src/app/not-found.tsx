@@ -1,5 +1,6 @@
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 
@@ -10,6 +11,14 @@ export default function NotFound() {
       <div className="absolute inset-0 bg-black/50 z-10"></div>
       
       <div className="container mx-auto px-4 z-20 text-center">
+        <Image
+          src="/fafa.webp"
+          alt="Confused man"
+          width={250}
+          height={250}
+          data-ai-hint="confused man"
+          className="mx-auto mb-8 rounded-full"
+        />
         <h1 className="font-chilanka text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-8">
           എടാ മോനെ അത് ലൊക്കാ.. <br/> ഇങ്ങ് പോര്, ഇങ്ങ് പോര്, ഇങ്ങ് പോര്...
         </h1>
