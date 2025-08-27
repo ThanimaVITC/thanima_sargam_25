@@ -11,7 +11,8 @@ const timelineEvents = [
   { time: "9:10 AM", event: "Prayer song" },
   { time: "9:15 AM", event: "Welcome address" },
   { time: "10:10 AM", event: "Culturals start" },
-  { time: "11:45 AM", event: "Arcade starts (till 2:15 PM)" },
+  { time: "11:30 AM", event: "Sadya"},
+  { time: "11:45 AM", event: "Arcade starts" },
   { time: "2:25 PM", event: "Culturals continue" },
   { time: "5:30 PM", event: "Chendamelam" },
 ];
