@@ -8,19 +8,15 @@ import PromoVideo from '@/components/sections/promo-video';
 import Gallery from '@/components/sections/gallery';
 import Footer from '@/components/layout/footer';
 import SargamInfo from '@/components/sections/sargam-info';
-import RegisterButton from '@/components/sections/register-button';
 import CelebrityGuest from '@/components/sections/celebrity-guest';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showRegisterIcon, setShowRegisterIcon] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 50;
       setIsScrolled(scrolled);
-      // Show icon when scrolled past the hero section (approx 100vh)
-      setShowRegisterIcon(window.scrollY > window.innerHeight);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -40,7 +36,6 @@ export default function Home() {
         <Gallery />
       </main>
       <Footer />
-      <RegisterButton showIcon={showRegisterIcon} />
     </div>
   );
 }
