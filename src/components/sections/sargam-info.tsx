@@ -2,6 +2,8 @@
 import { MapPin, Calendar, Clock, Trophy } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const timelineEvents = [
   { time: "9:00 AM", event: "Program starts" },
@@ -126,8 +128,13 @@ const SargamInfo = () => {
                            ))}
                         </div>
                      </div>
-                     <div>
-                        <p className="text-primary font-bold animate-pulse">Registrations starting soon!</p>
+                     <div className="flex flex-col sm:flex-row gap-4">
+                        <Button asChild>
+                            <Link href="#" target="_blank" rel="noopener noreferrer">Register for Arm Wrestling</Link>
+                        </Button>
+                        <Button asChild>
+                            <Link href="#" target="_blank" rel="noopener noreferrer">Register for Tug of War</Link>
+                        </Button>
                      </div>
                 </div>
             </div>
