@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import { Toaster } from "@/components/ui/toaster"
+import { Analytics } from "@vercel/analytics/react"
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -60,6 +61,7 @@ export default function RootLayout({
       <body className="antialiased font-body">
         {children}
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
