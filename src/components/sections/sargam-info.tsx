@@ -131,12 +131,7 @@ const SargamInfo = () => {
                         </div>
                      </div>
                      <div className="flex flex-col sm:flex-row gap-4">
-                        <Button asChild>
-                            <Link href="https://docs.google.com/forms/d/e/1FAIpQLScrivHbQN7nQniv0_giSHGu1S3-T9jpTRA570JF-TSv4NSy8Q/viewform" target="_blank" rel="noopener noreferrer">Register for Arm Wrestling</Link>
-                        </Button>
-                        <Button asChild>
-                            <Link href="https://docs.google.com/forms/d/e/1FAIpQLScWXBWBulIsRTgGr9nuZH_Hn08_xZSV7xaSwpyVCTA3QK0Wzg/viewform" target="_blank" rel="noopener noreferrer">Register for Tug of War</Link>
-                        </Button>
+                        <p className="text-muted-foreground font-bold">Registrations for all events are now closed.</p>
                      </div>
                 </div>
             </div>
