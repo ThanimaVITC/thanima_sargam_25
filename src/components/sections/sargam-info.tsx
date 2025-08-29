@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const timelineEvents = [
     { time: "8:30 AM" , event: "Program starts"},
-  { time: "9:00 AM", event: "Receiving Cheif Guest" },
+  { time: "9:00 AM", event: "Receiving Chief Guest" },
   { time: "9:10 AM", event: "Prayer song" },
   { time: "9:15 AM", event: "Welcome address" },
   { time: "10:10 AM", event: "Culturals start" },
