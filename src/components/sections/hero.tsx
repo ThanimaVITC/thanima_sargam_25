@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import CountdownTimer from '@/components/countdown-timer';
 
 type HeroProps = {
   isHeaderVisible: boolean;
@@ -24,8 +23,10 @@ const Hero = ({ isHeaderVisible }: HeroProps) => {
                   className="filter drop-shadow-2xl mx-auto"
               />
           </div>
-          <div className={`flex-grow transition-all duration-700 ease-in-out w-full`}>
-            <CountdownTimer />
+          <div className={`flex-grow transition-all duration-700 ease-in-out w-full flex items-center justify-center`}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline tracking-wider text-primary-foreground text-center">
+              SARGAM 2025
+            </h1>
           </div>
         </div>
       </div>
