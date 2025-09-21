@@ -13,7 +13,7 @@ This project is built with a modern web stack, including:
 
 ## About the Developer
 
-This website was developed by **[legitcoconut](https://github.com/legitcoconut)**.
+This website was developed by **[legitcoconut](https://github.com/legitcoconut)** && **[IsotoxalDev](https://github.com/isotoxaldev)**.
 
 ---
 
